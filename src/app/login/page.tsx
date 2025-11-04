@@ -53,7 +53,8 @@ const page = () => {
               router.push("/applicantDashboard");
              }).catch((error) => toast.error(`${error.response.data.msg}`,{
                 style:{
-            backgroundColor:'rgb(18, 18, 51)',
+   
+               backgroundColor:'rgb(18, 18, 51)',
             color:'white',
             minHeight:'40px',
             fontSize:'13px'

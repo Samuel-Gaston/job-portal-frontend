@@ -9,7 +9,7 @@ const page = () => {
        const Back = () =>{
         router.push("/applicantDashboard");
        } 
-       
+    const [title, settitle] = useState("")
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [phone, setphone] = useState("");
@@ -19,10 +19,10 @@ const page = () => {
     const [hobbies, sethobbies] = useState("");
     const [certificate, setcertificate] = useState("")
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+   
 
-    if (!name || !email || !phone || !qualification || !skill || !location || !hobbies || !certificate) {
+    if (!title || !name || !email || !phone || !qualification || !skill || !location || !hobbies || !certificate) {
         toast.error("Error. Fill In.", {
                               style:{
                               minHeight:20,
@@ -33,7 +33,8 @@ const page = () => {
                     })
     
     }else{
-      axios.post("http://localhost:5000/application", {name,email,phone, qualification, skill, location, hobbies, certificate}).then(() =>{
+      axios.post("http://localhost:5000/application", {title,name,email,phone, qualification, skill, location, hobbies, certificate}).then(() =>{
+      settitle(title)
         setname(name)
         setemail(email)
         setphone(phone)
@@ -69,6 +70,12 @@ const page = () => {
          <div className='interview bg-blue-950 text-gray-300'>
           <h1 className='text-center text-white'>Forward well defined details. Apply Now!</h1>
                     <br />
+  <p style={{marginLeft:20}}>Upload Job title!</p>
+          <input  type='text'
+             placeholder="Enter Job-title"
+               onChange={(e) => settitle(e.target.title)}
+              className="block my-2"/>
+
           <p style={{marginLeft:20}}>Upload your complete name!</p>
           <input  type='text'
              placeholder="Enter Name"

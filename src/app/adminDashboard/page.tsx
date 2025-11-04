@@ -29,7 +29,7 @@ const Page = () => {
       </div>
 
    
-      <div onClick={() => router.push("/application")} style={{backgroundColor:'rgb(5, 5, 28)'}} className=" shadow-md rounded-2xl p-6 hover:shadow-lg transition-all border border-gray-500 cursor-pointer">
+      <div onClick={() => router.push("/applicationss")} style={{backgroundColor:'rgb(5, 5, 28)'}} className=" shadow-md rounded-2xl p-6 hover:shadow-lg transition-all border border-gray-500 cursor-pointer">
         <div className="flex flex-col items-center">
           <GiArchiveRegister className="text-4xl mb-3"  style={{color:'green', marginTop:10}} />
           <h1 className="text-lg font-semibold text-gray-300" style={{marginBottom:5}}>Applications</h1>

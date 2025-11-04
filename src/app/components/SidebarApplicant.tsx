@@ -6,7 +6,7 @@ const SidebarApplicant = () => {
         <ul>
             <li><Link href='/applicantDashboard'>Dashboard</Link></li>
            <li><Link href="/">Jobs</Link></li>
-            <li><Link href="/appy">Apply</Link></li>
+            <li><Link href="/apply">Apply</Link></li>
             
              <li><Link href="/schedules">See Schedules</Link></li>
           </ul>

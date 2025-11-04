@@ -9,7 +9,7 @@ const page = () => {
        const Back = () =>{
         router.push("/applicantDashboard");
        } 
-    const [title, settitle] = useState("")
+   
     const [name, setname] = useState("")
     const [email, setemail] = useState("")
     const [phone, setphone] = useState("");
@@ -22,7 +22,7 @@ const page = () => {
   const handleSubmit = () => {
    
 
-    if (!title || !name || !email || !phone || !qualification || !skill || !location || !hobbies || !certificate) {
+    if (!name || !email || !phone || !qualification || !skill || !location || !hobbies || !certificate) {
         toast.error("Error. Fill In.", {
                               style:{
                               minHeight:20,
@@ -33,8 +33,8 @@ const page = () => {
                     })
     
     }else{
-      axios.post("http://localhost:5000/application", {title,name,email,phone, qualification, skill, location, hobbies, certificate}).then(() =>{
-      settitle(title)
+      axios.post("http://localhost:5000/application", {name,email,phone, qualification, skill, location, hobbies, certificate}).then(() =>{
+     
         setname(name)
         setemail(email)
         setphone(phone)
@@ -70,15 +70,11 @@ const page = () => {
          <div className='interview bg-blue-950 text-gray-300'>
           <h1 className='text-center text-white'>Forward well defined details. Apply Now!</h1>
                     <br />
-  <p style={{marginLeft:20}}>Upload Job title!</p>
-          <input  type='text'
-             placeholder="Enter Job-title"
-               onChange={(e) => settitle(e.target.title)}
-              className="block my-2"/>
 
-          <p style={{marginLeft:20}}>Upload your complete name!</p>
+
+          <p style={{marginLeft:20}}>Upload your complete name and the Job Postion!</p>
           <input  type='text'
-             placeholder="Enter Name"
+             placeholder="Enter Name and the Job Title"
                onChange={(e) => setname(e.target.value)}
               className="block my-2"/>
 

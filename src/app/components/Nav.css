@@ -1,0 +1,517 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+        background-color: rgb(5, 5, 36);
+       font-family: Georgia, 'Times New Roman', Times, serif;
+        color:   rgb(249, 242, 242);
+        font-size: 14;
+        background-image: radial-gradient(green 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+        background-size: 20px 20px, 40px 40px;
+        background-position: 0 0, 10px 10px;
+        animation: animateBackground 10s linear infinite;
+}
+@keyframes animateBackground {
+    0%{
+        background-position: 0 0, 10px 10px;
+    }
+    100%{
+        background-position: 20px 20px, 30px 30px;
+    }
+}
+.Nav{
+  
+    width: calc(100%);
+   margin-bottom: 20;
+}
+.logo{
+    margin-left: 20;
+}
+.Nav ul{
+    margin-left: 20;
+    margin-top: -60;
+}
+.Nav ul li{
+    display: inline-block;
+    padding: 16px 18px;
+}
+.Nav ul li a{
+    text-decoration: none;
+}
+.Nav ul li a:hover{
+    background-color: green;
+    color: white;
+      transition: 0.5s all ease-in-out;
+      border-radius: 5;
+      padding: 10;
+}
+.Nav button{
+    background-color: green;
+    cursor: pointer;
+    margin-right: 70;
+    padding: 10;
+   
+    border-radius: 5;
+    margin-top: -5;
+}
+.Nav button:hover{
+    transition: 0.5s all ease-in-out;
+    background-color: white;
+    color: black;
+}
+
+.content{
+    margin-top:90;
+}
+.content h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.content button{
+    background-color: green;
+    cursor: pointer;
+    width: 120px;
+    height: 35;
+    border-radius: 5;
+    justify-content: center;
+    margin-top: 20;
+}
+.content input{
+    width: 50%;
+    margin-top: 20;
+    height: 35;
+    border-radius: 30;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+}
+.Card{
+
+    background-color: rgb(5, 5, 28);
+       width: calc(80%);
+  
+}
+.sub-card{
+    gap: 30;
+       border: 1px solid rgb(148, 141, 141);
+       border-radius: 10;
+       padding: 10px;
+}
+.sub-card button{
+    background-color: rgb(3, 87, 3);
+    cursor: pointer;
+    width: 25%;
+    height: 25;
+    border-radius: 5;
+    margin-top: -5;
+    margin-top: 30;
+    color: rgb(228, 221, 221);
+}
+.sub-card button:hover{
+    transition: 0.5s all ease-in-out;
+    background-color: white;
+    color: black;
+}
+.register{
+    width: calc(30% - 20px);
+   margin-top:50 ;
+   border-radius: 20;
+   margin-bottom: 400;
+     background-color: rgb(18, 18, 51);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        
+}
+.register h1{
+    margin-top: 20;
+    font-size: 16;
+}
+.register p{
+    margin-top: 20;
+    margin-bottom: 15;
+}
+.register input{
+    border: 1px solid rgb(188, 184, 184);
+    text-align: center;
+    margin-left: 23;
+    margin-right: 23;
+    width: calc(90% - 20px);
+    height: 33;
+    color: white;
+    padding: 2;
+    border-radius: 10;
+}
+.register select{
+       border: 1px solid rgb(188, 184, 184);
+    text-align: center;
+    margin-left: 23;
+    margin-right: 23;
+    width: calc(90% - 20px);
+    height: 30;
+    color:  rgb(188, 184, 184);
+    padding: 2;
+    border-radius: 10;
+       background-color: rgb(18, 18, 51);
+}
+.register button{
+     width: calc(90% - 20px);
+     height: 35;
+      margin-left: 23;
+      margin-right: 23;
+      border-radius: 10;
+      margin-bottom: 40;
+      cursor: pointer;
+      background-color: green;
+}
+.register button:hover{
+    transition: 0.5s all ease-in;
+    background-color: white;
+    color: black;
+}
+.interview{
+    width: calc(70% - 20px);
+       margin-top:50 ;
+   border-radius: 20;
+   margin-bottom: 400;
+     background-color: rgb(18, 18, 51);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.interview h1{
+      margin-top: 20;
+    font-size: 16;
+}
+.interview p{
+      margin-top: 20;
+    margin-bottom: 15;
+}
+.interview input{
+      border: 1px solid rgb(188, 184, 184);
+    text-align: center;
+    margin-left: 23;
+    margin-right: 23;
+    width: calc(96% - 20px);
+    height: 33;
+     color: rgb(188, 184, 184);
+    padding: 2;
+    border-radius: 10;
+}
+.interview textarea{
+     border: 1px solid rgb(188, 184, 184);
+    text-align: center;
+    margin-left: 23;
+    margin-right: 23;
+    width: calc(96% - 20px);
+    height: 70;
+    color: rgb(188, 184, 184);
+    padding: 2;
+    border-radius: 10;
+}
+.interview select{
+       border: 1px solid rgb(188, 184, 184);
+    text-align: center;
+    margin-left: 23;
+    margin-right: 23;
+    width: calc(90% - 20px);
+    height: 30;
+    color:  rgb(188, 184, 184);
+    padding: 2;
+    border-radius: 10;
+       background-color: rgb(18, 18, 51);
+}
+.interview button{
+     width: calc(96% - 20px);
+     height: 35;
+      margin-left: 23;
+      margin-right: 23;
+      border-radius: 10;
+      margin-bottom: 40;
+      cursor: pointer;
+      background-color: green;
+}
+.interview button:hover{
+    transition: 0.5s all ease-in;
+    background-color: white;
+    color: black;
+}
+.contact{
+    font-family: 'Times New Roman', Times, serif;
+}
+.contact h1{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.contact input{
+   gap: 10;
+    width: 27%;
+   height: 40px;
+    border: 2px solid green;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 10;
+}
+.contact textarea{
+
+    width: 86%;
+   height: 90px;
+    border: 2px solid green;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.contact button{
+    width: calc(86%);
+    height: 35px;
+    border: 1px solid rgb(3, 87, 3);
+    margin-bottom: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+   background-color: rgb(5, 108, 5);
+    cursor: pointer;
+    font-size: 17;
+}
+.contact button:hover{
+    color: black;
+    font-weight: bold;
+   
+    transition: 0.5s all ease-in-out;
+}
+.footer{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+       justify-content: center;
+       margin-top: 150;
+}
+.left-footer,.right-footer{
+    padding: 10px;
+    width: calc(25.33% - 20px);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgb(57, 56, 56);
+ 
+        background-color: rgb(5, 5, 36);
+}
+.left-footer h1{
+    color: green;
+    font-weight: bold;
+    font-size: 50px;
+}
+.left-footer p{
+    padding: 4px;
+    font-size: 15;
+}
+.right-footer p{
+    padding: 5px;
+}
+.last{
+       margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.left-last,.right-last{
+        padding: 10px;
+         background-color: rgb(5, 5, 36);
+
+}
+.right-last p{
+    color: green;
+    font-weight: bold;
+}
+.dashboard{
+
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+    font-size: 15;
+   
+}
+.left-dashboard{
+    padding: 10px;
+    width: calc(20% - 20px);
+  background-color:rgb(5, 5, 28);
+   margin-left: -40;
+}
+.left-dashboard ul{
+    margin-left: 15px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+.left-dashboard ul li{
+    padding: 10px;
+    font-size: 15px;
+     font-family: 'Times New Roman', Times, serif;
+}
+.left-dashboard ul li:hover{
+    background-color:rgb(4, 69, 4);
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.left-dashboard button{
+    width: calc(100% - 20px);
+    background-color: rgb(3, 93, 3);
+    padding: 7;
+    border-radius: 10;
+    margin-bottom: 40;
+    cursor: pointer;
+    margin-left: 12;
+    font-size: 13;
+}
+.right-dashboard{
+    padding: 10px;
+    width: calc(80% - 20px);
+     font-family: 'Times New Roman', Times, serif;
+    
+}
+.sub-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10;
+}
+.left-sub-right,.right-sub-right{
+       padding: 10px;
+
+       width: calc(30% - 20px);
+}
+.left-sub-right h1{
+    margin-top: -15;
+}
+.histogram{
+    display: flex;
+   
+}
+.left-histogram,.right-histogram{
+    width: calc(60% - 20px);
+    
+}
+.right-dashboard h1{
+    margin-top: 20px;
+}
+@media only screen and (max-width:768px) {
+    .register{
+        width: calc(40% - 20px);
+    }
+    .interview{
+        width: calc(40% - 20px);
+    }
+     .dashboard{
+    width: calc(100%);
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .left-dashboard,.right-dashboard{
+
+    width: calc(100%);
+  }
+  .Chart{
+    width: calc(100%);
+  }
+      .footer{
+        width: calc(100%);
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .left-footer,.right-footer{
+        width: calc(100%);
+        margin-left: 0;
+    }
+    .last{
+        width: calc(100%);
+        margin-left: 0;
+    }
+    .left-last,.right-last{
+        width: calc(100%);
+        margin-left: 0;
+    }
+}
+@media only screen and (max-width:480px) {
+    .Nav ul{
+        margin-top: 10;
+    }
+    .Nav button{
+        margin-top: 50;
+      margin-right: 120;
+    }
+    .Card{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+      .register{
+        width: calc(100% - 20px);
+    }
+    .register input{
+        width: calc(90% - 20px);
+        margin-left: 20;
+    }
+    .register button{
+        width: calc(90% - 20px);
+        margin-left: 20;
+      
+    }
+      .interview{
+        width: calc(100% - 20px);
+    }
+    .interview input{
+        width: calc(90% - 20px);
+        margin-left: 20;
+    }
+    .interview button{
+        width: calc(90% - 20px);
+        margin-left: 20;
+      
+    }
+      .footer{
+        width: calc(100%);
+        margin-left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .left-footer,.right-footer{
+        width: calc(100%);
+        margin-left: 0;
+    }
+    .last{
+        width: calc(100%);
+        margin-left: 0;
+    }
+    .left-last,.right-last{
+        width: calc(100%);
+        margin-left: 0;
+    }
+       .contact{
+        width: calc(100%);
+        margin-left: 0;
+    }
+    .contact input{
+       margin-left: 0;
+        width: calc(90%);
+      margin-top: 20;
+    }
+    .contact textarea{
+     
+        width: calc(90%);
+      margin-top: 20;
+    }
+    .contact button{
+        
+        width: calc(90%);
+      margin-top: 20;
+    }
+
+    .left-dashboard{
+        margin-left: 0;
+    }
+}

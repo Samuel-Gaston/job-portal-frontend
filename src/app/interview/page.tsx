@@ -27,7 +27,7 @@ const Page = () => {
 
       const getAllInterview = async() =>{
     try {
-      const response = await axios.get("http://localhost:5000/interview")
+      const response = await axios.get("https://job-server-portal.onrender.com/interview")
       setInterview(response.data)
       console.log('response data', response.data);
     } catch (error) {
@@ -40,7 +40,7 @@ const Page = () => {
 
 
       const deleteInterview = (id:number) =>{
-        axios.delete(`http://localhost:5000/interview/${id}`).then(() =>{
+        axios.delete(`https://job-server-portal.onrender.com/interview/${id}`).then(() =>{
           setInterview(Interview.filter(Interview => Interview._id !== id));
           toast.success("Interview deleted Successfully.", {
                          style:{
@@ -68,7 +68,7 @@ const Page = () => {
                         })
       }
       else{
-        axios.post("http://localhost:5000/interview", {title,name,date}).then(() =>{
+        axios.post("https://job-server-portal.onrender.com/interview", {title,name,date}).then(() =>{
           settitle(title)
           setname(name)
           setdate(date)

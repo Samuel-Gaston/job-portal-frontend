@@ -5,6 +5,7 @@ const Sidebar = () => {
     <div>
         <ul>
             <li><Link href='/adminDashboard'>Dashboard</Link></li>
+            {/* <li><Link href='/applicant'>Applicants</Link></li> */}
            <li><Link href="/jobs">Jobs</Link></li>
             <li><Link href="/applicationss">Applications</Link></li>
          

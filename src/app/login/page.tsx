@@ -4,8 +4,8 @@ import {  useState } from 'react';
 import { ToastContainer,toast } from 'react-toastify';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
-axios.defaults.withCredentials = true;
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.withCredentials = false;
+axios.defaults.baseURL = "https://job-server-portal.onrender.com";
 
 const page = () => {
        const router = useRouter(); 
@@ -30,7 +30,7 @@ const page = () => {
           }})
         }
         else{
-          axios.post(`${"http://localhost:5000/admin/auth"}`, {email, password}).then((res) =>{
+          axios.post(`${"https://job-server-portal.onrender.com/admin/auth"}`, {email, password}).then((res) =>{
                   toast.success(`${res.data.msg}`,{
                 style:{
             backgroundColor:'rgb(18, 18, 51)',
@@ -41,7 +41,7 @@ const page = () => {
             } )
             router.push("/adminDashboard")
                 }).catch((error) =>{
-                axios.post(`${"http://localhost:5000/user/auth"}`, {email, password}).then(res =>{
+                axios.post(`${"https://job-server-portal.onrender.com/user/auth"}`, {email, password}).then(res =>{
                   toast.success(`${res.data.msg}`, {
                 style:{
             backgroundColor:'rgb(18, 18, 51)',
@@ -53,7 +53,6 @@ const page = () => {
               router.push("/applicantDashboard");
              }).catch((error) => toast.error(`${error.response.data.msg}`,{
                 style:{
-   
                backgroundColor:'rgb(18, 18, 51)',
             color:'white',
             minHeight:'40px',

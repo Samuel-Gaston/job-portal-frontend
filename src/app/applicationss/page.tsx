@@ -26,7 +26,7 @@ const Page = () => {
 
       const getAllApplications = async() =>{
     try {
-      const response = await axios.get("http://localhost:5000/application")
+      const response = await axios.get("https://job-server-portal.onrender.com/application")
       setApplication(response.data)
       console.log('response data', response.data);
     } catch (error) {
@@ -59,7 +59,7 @@ const Page = () => {
 };
 
       const deleteApplication = (id:number) =>{
-        axios.delete(`http://localhost:5000/application/${id}`).then(() =>{
+        axios.delete(`https://job-server-portal.onrender.com/application/${id}`).then(() =>{
           setApplication(Application.filter(Application => Application._id !== id));
            toast.success("Application deleted Successfully.", {
                          style:{
@@ -73,37 +73,7 @@ const Page = () => {
         
       }
 
-      //        const handlesubmit = () =>{
-      //               if(!title || !qualification || !description || !skill || !deadline){
-      //     toast.error("Error. Fill In.", {
-      //                    style:{
-      //                    minHeight:20,
-      //                   fontSize:12,
-      //                   fontWeight:'bold',
-      //                    backgroundColor:'rgb(5, 5, 28)'
-      //                  }
-      //                   })
-      // }
-      // else{
-      //   axios.post("http://localhost:5000/application", {title, qualification, description,skill,deadline}).then(() =>{
-      //     settitle(title)
-      //     setqualification(qualification)
-      //     setdescription(description)
-      //     setskill(skill)
-      //     setdeadline(deadline)
-      //         toast.success("Application added Successfully.", {
-      //                    style:{
-      //                    minHeight:20,
-      //                   fontSize:12,
-      //                   fontWeight:'bold',
-      //                    backgroundColor:'rgb(5, 5, 28)'
-      //                  }
-      //                   })
-      //           router.push("/adminDashboard");   
-      //   }).catch((error) => toast.error("error", error))
-          
-      // }
-      //        }
+
   return (
     <div>
       <ToastContainer />

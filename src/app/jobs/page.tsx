@@ -31,7 +31,7 @@ const Page = () => {
 
       const getAllJob = async() =>{
     try {
-      const response = await axios.get("http://localhost:5000/job")
+      const response = await axios.get("https://job-server-portal.onrender.com/job")
       setJob(response.data)
       console.log('response data', response.data);
     } catch (error) {

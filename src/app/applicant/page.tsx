@@ -20,7 +20,7 @@ const Page = () => {
 
       const getAllUsers = async() =>{
     try {
-      const response = await axios.get("https://job-server-portal.onrender.com/user")
+      const response = await axios.get("https://job-portal-server1-a8ij.onrender.com/user")
       setUser(response.data)
       console.log('response data', response.data);
     } catch (error) {
@@ -35,7 +35,7 @@ const Page = () => {
 
 
       const deleteUser = (id:number) =>{
-        axios.delete(`https://job-server-portal.onrender.com/user/${id}`).then(() =>{
+        axios.delete(`https://job-portal-server1-a8ij.onrender.com/user/${id}`).then(() =>{
           setUser(User.filter(User => User._id !== id));
            toast.success("User deleted Successfully.", {
                          style:{

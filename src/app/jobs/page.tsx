@@ -31,7 +31,7 @@ const Page = () => {
 
       const getAllJob = async() =>{
     try {
-      const response = await axios.get("https://job-server-portal.onrender.com/job")
+      const response = await axios.get("https://job-portal-server1-a8ij.onrender.com/job")
       setJob(response.data)
       console.log('response data', response.data);
     } catch (error) {
@@ -44,8 +44,16 @@ const Page = () => {
 
 
       const deleteJob = (id:number) =>{
-        axios.delete(`http://localhost:5000/job/${id}`).then(() =>{
+        axios.delete(`https://job-portal-server1-a8ij.onrender.com/job/${id}`).then(() =>{
           setJob(Job.filter(Job => Job._id !== id));
+           toast.success("Job deleted Successfully.", {
+                                   style:{
+                                   minHeight:20,
+                                  fontSize:12,
+                                  fontWeight:'bold',
+                                  backgroundColor:'rgb(18, 18, 51)',
+                                 }
+                                  })
         })
       }
 
@@ -61,7 +69,7 @@ const Page = () => {
                         })
       }
       else{
-        axios.post("http://localhost:5000/job", {title, qualification, description,skill,deadline}).then(() =>{
+        axios.post("https://job-portal-server1-a8ij.onrender.com/job", {title, qualification, description,skill,deadline}).then(() =>{
           settitle(title)
           setqualification(qualification)
           setdescription(description)

@@ -5,7 +5,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 axios.defaults.withCredentials = false;
-axios.defaults.baseURL = "https://job-server-portal.onrender.com";
+axios.defaults.baseURL = "https://job-portal-server1-a8ij.onrender.com";
 
 const page = () => {
        const router = useRouter(); 
@@ -30,7 +30,7 @@ const page = () => {
           }})
         }
         else{
-          axios.post(`${"https://job-server-portal.onrender.com/admin/auth"}`, {email, password}).then((res) =>{
+          axios.post(`${"https://job-portal-server1-a8ij.onrender.com/admin/auth"}`, {email, password}).then((res) =>{
                   toast.success(`${res.data.msg}`,{
                 style:{
             backgroundColor:'rgb(18, 18, 51)',
@@ -41,7 +41,7 @@ const page = () => {
             } )
             router.push("/adminDashboard")
                 }).catch((error) =>{
-                axios.post(`${"https://job-server-portal.onrender.com/user/auth"}`, {email, password}).then(res =>{
+                axios.post(`${"https://job-portal-server1-a8ij.onrender.com/user/auth"}`, {email, password}).then(res =>{
                   toast.success(`${res.data.msg}`, {
                 style:{
             backgroundColor:'rgb(18, 18, 51)',

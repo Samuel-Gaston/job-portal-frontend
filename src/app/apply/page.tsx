@@ -33,7 +33,7 @@ const page = () => {
                     })
     
     }else{
-      axios.post("https://job-server-portal.onrender.com/application", {name,email,phone, qualification, skill, location, hobbies, certificate}).then(() =>{
+      axios.post("https://job-portal-server1-a8ij.onrender.com/application", {name,email,phone, qualification, skill, location, hobbies, certificate}).then(() =>{
      
         setname(name)
         setemail(email)

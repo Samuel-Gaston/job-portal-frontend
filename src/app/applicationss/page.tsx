@@ -26,7 +26,7 @@ const Page = () => {
 
       const getAllApplications = async() =>{
     try {
-      const response = await axios.get("https://job-server-portal.onrender.com/application")
+      const response = await axios.get("https://job-portal-server1-a8ij.onrender.com/application")
       setApplication(response.data)
       console.log('response data', response.data);
     } catch (error) {
@@ -59,7 +59,7 @@ const Page = () => {
 };
 
       const deleteApplication = (id:number) =>{
-        axios.delete(`https://job-server-portal.onrender.com/application/${id}`).then(() =>{
+        axios.delete(`https://job-portal-server1-a8ij.onrender.com/application/${id}`).then(() =>{
           setApplication(Application.filter(Application => Application._id !== id));
            toast.success("Application deleted Successfully.", {
                          style:{

@@ -5,7 +5,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 axios.defaults.withCredentials = false;
-axios.defaults.baseURL = "https://job-server-portal.onrender.com";
+axios.defaults.baseURL = "https://job-portal-server1-a8ij.onrender.com";
 const page = () => {
        const router = useRouter();
        const login = () =>{

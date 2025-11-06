@@ -26,7 +26,7 @@ const Card = () => {
         const [Jobs, setJobs] = useState<Job[]>([])
 
         const getAllJobs = () =>{
-          axios.get("https://job-server-portal.onrender.com/job").then((res) =>{
+          axios.get("https://job-portal-server1-a8ij.onrender.com/job").then((res) =>{
             setJobs(res.data)
           }).catch((error) => toast.error("error", error))
         }

@@ -19,7 +19,7 @@ const page = () => {
        const [Interviews, setInterviews] = useState<Interview[]>([])
 
        const getAllInterview = () =>{
-        axios.get("https://job-server-portal.onrender.com/interview").then((res) =>{
+        axios.get("https://job-portal-server1-a8ij.onrender.com/interview").then((res) =>{
             setInterviews(res.data)
         }).catch((error) => console.log(error))
        }

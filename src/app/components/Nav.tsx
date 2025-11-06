@@ -38,7 +38,7 @@ const Nav = () => {
     <div className='hidden md:flex flex-wrap justify-end' style={{marginTop:-40}}>
        <button onClick={login}>Sign-In</button>
     </div>
-        <FiMenu  className="md:hidden flex flex-wrap justify-end" style={{marginLeft:260, marginTop:-50, backgroundColor:'green', width:35, height:30, padding:4, borderRadius:6, cursor:'pointer'}} onClick={toggleMenu} size={24} />
+        <FiMenu  className="md:hidden flex flex-wrap justify-end" style={{marginLeft:300, marginTop:-50, backgroundColor:'green', width:35, height:30, padding:4, borderRadius:6, cursor:'pointer'}} onClick={toggleMenu} size={24} />
   
       {showMenu && (
         <ul className="md:hidden flex justify-center" style={{backgroundColor: 'rgb(18, 18, 51)', marginTop:20, marginLeft:0}}>

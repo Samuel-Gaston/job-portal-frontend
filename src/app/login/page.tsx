@@ -3,6 +3,7 @@ import '../components/Nav.css';
 import {  useState } from 'react';
 import { ToastContainer,toast } from 'react-toastify';
 import axios from 'axios';
+import { FaUserCircle } from "react-icons/fa";
 import { useRouter } from 'next/navigation';
 axios.defaults.withCredentials = false;
 axios.defaults.baseURL = "https://job-portal-server1-a8ij.onrender.com";
@@ -71,6 +72,9 @@ const page = () => {
        <div className='Overall flex flex-wrap justify-center'>
          <div className='register bg-blue-950'>
           <h1 className='text-center text-white'>Sign-In</h1>
+         <div className='flex flex-wrap justify-center' style={{marginTop:10}}>
+           <FaUserCircle className="text-6xl text-gray-400 mx-auto mb-4" />
+         </div>
           <p style={{marginLeft:20}}>Hey, Confirmed yourself!</p>
           <br />
           <input type='email' placeholder='email here' value={email} onChange={(e) => setemail(e.target.value)} />

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ToastContainer,toast } from 'react-toastify';
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
+import { FaUserPlus } from "react-icons/fa";
 axios.defaults.withCredentials = false;
 axios.defaults.baseURL = "https://job-portal-server1-a8ij.onrender.com";
 const page = () => {
@@ -64,6 +65,9 @@ const page = () => {
        <div className='Overall flex flex-wrap justify-center'>
          <div className='register bg-blue-950'>
           <h1 className='text-center text-white'>Sign-Up</h1>
+          <div className='flex flex-wrap justify-center' style={{marginTop:10}}>
+            <FaUserPlus className="text-6xl text-gray-400 mx-auto mb-4" />
+          </div>
           <p style={{marginLeft:20}}>Hey, Nice meeting you!</p>
           <br />
           <input type='text' placeholder='Name here' value={name} onChange={(e) => setname(e.target.value)} />
